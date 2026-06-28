@@ -1,0 +1,136 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f5faf8;
+  --surface: #ffffff;
+  --text: #142420;
+  --muted: #66736f;
+  --line: #dce8e4;
+  --accent: #008f81;
+  --accent-soft: #dff4f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101614;
+    --surface: #18211f;
+    --text: #edf7f4;
+    --muted: #a9b8b3;
+    --line: #2b3835;
+    --accent: #34c7b8;
+    --accent-soft: #153a35;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  line-height: 1.8;
+}
+
+main {
+  width: min(880px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+
+header {
+  margin-bottom: 28px;
+}
+
+.brand {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.lead,
+.updated {
+  color: var(--muted);
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0;
+}
+
+nav a,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a.secondary,
+.button.secondary {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  margin-top: 18px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+p:last-child,
+ul:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 1.3em;
+}
+
+li {
+  margin: 6px 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+footer {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 28px;
+  text-align: center;
+}
